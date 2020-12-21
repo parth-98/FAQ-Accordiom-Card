@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <img class="box_image" src="images/illustration-box-desktop.svg" alt="box_image">
+        <div class="card">
+            <div class="woman_image">
+                <img class="woman-desktop-image" src="images/illustration-woman-online-desktop.svg" alt="Woman-online">
+                <img class="woman-mobile-image" src="images/illustration-woman-online-mobile.svg" alt="woman-online">
+            </div>
+            <div class="faq">
+                <h1 class="title_faq">FAQ</h1>
+                <div class="faq-question">
+                    <div class="question_section">
+                        <div class="question">
+                            <h2 class="question-inner">How many team members can I invite?</h2>
+                            <img class="arrow_question" src="images/icon-arrow-down.svg" alt="arrow-down">
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quis minus nisi nostrum
+                                debitis explicabo voluptatum vel exercitationem quam praesentium.</p>
+                        </div>
+                    </div>
+                    <div class="question_section">
+                        <div class="question">
+                            <h2 class="question-inner">What is the maximum file upload size? </h2>
+                            <img class="arrow_question" src="images/icon-arrow-down.svg" alt="arrow-down">
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quis minus nisi nostrum
+                                debitis explicabo voluptatum vel exercitationem quam praesentium.</p>
+                        </div>
+                    </div>
+                    <div class="question_section">
+                        <div class="question">
+                            <h2 class="question-inner">How do i reset my password?</h2>
+                            <img class="arrow_question" src="images/icon-arrow-down.svg" alt="arrow-down">
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quis minus nisi nostrum
+                                debitis explicabo voluptatum vel exercitationem quam praesentium.</p>
+                        </div>
+                    </div>
+                    <div class="question_section">
+                        <div class="question">
+                            <h2 class="question-inner">Can i cancel my subscription?</h2>
+                            <img class="arrow_question" src="images/icon-arrow-down.svg" alt="arrow-down">
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quis minus nisi nostrum
+                                debitis explicabo voluptatum vel exercitationem quam praesentium.</p>
+                        </div>
+                    </div>
+                    <div class="question_section">
+                        <div class="question">
+                            <h2 class="question-inner">Do you provide additional support?</h2>
+                            <img class="arrow_question" src="images/icon-arrow-down.svg" alt="arrow-down">
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quis minus nisi nostrum
+                                debitis explicabo voluptatum vel exercitationem quam praesentium.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js" type="text/javascript" ></script>
+    <script>
+        $(document).ready(function () {
+            $('.question').click(function () {
+                var $target = $(this).next('.answer');
+                $('.answer').not($target).slideUp()
+                 $(this).siblings('.answer').slideToggle();
+                $(this).children().toggleClass('active');
+                $(this).children('.arrow_question').toggleClass('active_question');
+               $(this).parent().siblings().children('.question').children().removeClass('active');
+                $(this).parentsUntil().siblings().children('.question').children('.arrow_question').removeClass('active_question');
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>
